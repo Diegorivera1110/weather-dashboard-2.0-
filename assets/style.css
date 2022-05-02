@@ -1,0 +1,18 @@
+.jumbotron {
+    background-color: darkcyan;
+    color: white;
+}
+
+.searchSide {
+    margin-left: 3%;
+}
+
+.searchBtn {
+    margin: 15px 15px;
+    width: 50%;
+}
+
+.currentWeather {
+    border: 2px solid gray;
+    
+}
