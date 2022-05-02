@@ -8,7 +8,7 @@ var weatherIcon = document.querySelector(".weatherIcon");
 
 var getWeatherData = function(location) {
 
-    var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=9feddfec43ca2ca89492bcf77207b126&units=imperial&appid=';
+    var apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + location + '&appid=9feddfec43ca2ca89492bcf77207b126&units=imperial';
 
     fetch(apiUrl)
     .then(function(response) {
@@ -17,7 +17,10 @@ var getWeatherData = function(location) {
     }).then(function(data){
         console.log(data);
 
-        $("")
+        $(".cityName").text(data.name);
+        $(".cityTemp").text(data.main.temp);
+        $(".citySpeed").text(data.wind.speed);
+        $(".cityHumidity").text(data.main.humidity);
 
     })
 };
